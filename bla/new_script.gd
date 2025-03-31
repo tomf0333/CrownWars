@@ -1,2 +1,3 @@
 extends Node
-print("hello")
+func main():
+	print("hello")

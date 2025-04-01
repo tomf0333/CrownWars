@@ -2,10 +2,10 @@ extends Node
 
 class Heart:
 	
-	var popularity = null
+	var popularity : int = -1
 	
-	func _init(_popularity: int):
-		self.popularity = _popularity
+	func _init(popularity: int = -1):
+		self.popularity = popularity
 	
 	func get_hurt(damage: int):
 		self.popularity -= damage
@@ -18,5 +18,5 @@ class Heart:
 		return self.popularity
 	
 	# Setters
-	func set_popularity(_popularity: int):
-		self.popularity = _popularity
+	func set_popularity(new_popularity: int):
+		self.popularity = new_popularity

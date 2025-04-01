@@ -1,17 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://dhqi0ii4vegrp"]
+[gd_scene load_steps=6 format=3 uid="uid://dhqi0ii4vegrp"]
 
 [ext_resource type="Texture2D" uid="uid://c1n8qddjn8aa4" path="res://Assets/BlankCardpng.png" id="1_84j6k"]
 [ext_resource type="Script" uid="uid://drstwtbss7bcm" path="res://Scenes/CardManager.gd" id="1_n4r8k"]
+[ext_resource type="Script" uid="uid://dmkulspyosgn2" path="res://Scenes/card_template.gd" id="1_xdji4"]
 [ext_resource type="Texture2D" uid="uid://8bok3l67f1tj" path="res://Assets/Spade.png" id="2_n4r8k"]
 [ext_resource type="Texture2D" uid="uid://cb04cjpssoa1d" path="res://Assets/7_B.png" id="3_xdji4"]
 
 [node name="CardTemplate" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 0.087
+anchor_bottom = 0.231
+offset_right = -0.224007
+offset_bottom = 0.311996
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_xdji4")
 
 [node name="Container" type="Container" parent="."]
 custom_minimum_size = Vector2(90, 140)

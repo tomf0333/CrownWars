@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpg0vny3tupg5"]
+[gd_scene load_steps=3 format=3 uid="uid://cpg0vny3tupg5"]
 
+[ext_resource type="Script" uid="uid://dbb4dodqc1bnd" path="res://Scenes/playing_mat.gd" id="1_dt8a4"]
 [ext_resource type="Script" uid="uid://dioi8hn00ejh2" path="res://LayoutManager.gd" id="1_vkdmi"]
 
 [node name="PlayingMat" type="Node"]
+script = ExtResource("1_dt8a4")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
 offset_right = 40.0
@@ -11,7 +13,9 @@ stretch = true
 script = ExtResource("1_vkdmi")
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
 size = Vector2i(40, 40)
+render_target_update_mode = 4
 
 [node name="TextureRect" type="TextureRect" parent="SubViewportContainer/SubViewport"]
 anchors_preset = 15

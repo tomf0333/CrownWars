@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://dca2gcdl1s0nq"]
+
+[ext_resource type="Script" uid="uid://h4cl0dsjewa5" path="res://cardRenderer.gd" id="1_0qqmn"]
+
+[node name="Card" type="Node2D"]
+script = ExtResource("1_0qqmn")
+
+[node name="CardRatio" type="AspectRatioContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CardMargin" type="Control" parent="CardRatio"]
+layout_mode = 2
+
+[node name="CardDivide" type="VBoxContainer" parent="CardRatio/CardMargin"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 0
+
+[node name="TopSuit" type="Control" parent="CardRatio/CardMargin/CardDivide"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="CardRatio/CardMargin/CardDivide/TopSuit"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 0, 1, 1)
+
+[node name="CardValue" type="Control" parent="CardRatio/CardMargin/CardDivide"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="CardRatio/CardMargin/CardDivide/CardValue"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 1, 1)
+
+[node name="BottomSuit" type="Control" parent="CardRatio/CardMargin/CardDivide"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="CardRatio/CardMargin/CardDivide/BottomSuit"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 0, 0, 1)

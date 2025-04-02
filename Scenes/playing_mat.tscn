@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cpg0vny3tupg5"]
 
-[ext_resource type="Script" uid="uid://dbb4dodqc1bnd" path="res://Scenes/playing_mat.gd" id="1_dt8a4"]
+[ext_resource type="Script" uid="uid://dbb4dodqc1bnd" path="res://Scripts/playing_mat.gd" id="1_dt8a4"]
 [ext_resource type="Script" uid="uid://dioi8hn00ejh2" path="res://LayoutManager.gd" id="1_vkdmi"]
 
 [node name="PlayingMat" type="Node"]

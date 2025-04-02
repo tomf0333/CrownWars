@@ -50,13 +50,16 @@ var num : int
 var suit : Suit
 var value : int
 
+const ACE_NUM = 1
+const JACK_NUM = 11
+const ROYALTY_VAL = 40
+
 func _init(_num : int = -1, _suit : Suit = Suit.NONE):
 	self.num = _num
-	# TODO - tomfe - needs work
-	if _num <= 10:
-		self.value = _num
+	if _num <= JACK_NUM:
+		self.value = min(_num, 10) # jack is 11 but value is 10
 	else:
-		self.value = (_num - 9) * 10
+		self.value = ROYALTY_VAL # QUEEN + KING 
 	self.suit = _suit
 
 func is_black() -> bool:
@@ -79,6 +82,9 @@ func get_num() -> int:
 func get_suit() -> Suit:
 	return self.suit
 
+func get_value() -> int:
+	return self.value
+	
 # Setters
 func set_num(new_num : int):
 	self.num = new_num
